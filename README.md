@@ -39,7 +39,7 @@ En palabras más simples, nosotros ingresamos código de Kotlin y se transforma 
 
 ## ****Qué es Kotlin****
 
-Kotlin es un lenguaje de programación estático de código abierto que admite la programación funcional y orientada a objetos. Proporciona una sintaxis y conceptos similares a los de otros lenguajes, como C#, Java y Scala, entre muchos otros. No pretende ser 煤nico, sino que se inspira en décadas de desarrollo del lenguaje. Cuenta con variantes que se orientan a la JVM (Kotlin/JVM), JavaScript (Kotlin/JS) y el código nativo (Kotlin/Native).
+Kotlin es un lenguaje de programación estático de código abierto que admite la programación funcional y orientada a objetos. Proporciona una sintaxis y conceptos similares a los de otros lenguajes, como C#, Java y Scala, entre muchos otros. No pretende ser único, sino que se inspira en décadas de desarrollo del lenguaje. Cuenta con variantes que se orientan a la JVM (Kotlin/JVM), JavaScript (Kotlin/JS) y el código nativo (Kotlin/Native).
 
 ![Untitled](assest_md/Untitled.png)
 
@@ -205,7 +205,7 @@ En la siguiente tabla te voy a dejar las operaciones que vas a poder realizar co
 | a <= b | c = a <= b | public override operator fun compareTo(other: Int): Int |
 | a != b | c = a != b | public open operator fun equals(other: Any?): Boolean |
 
-Dependiendo del tipo de dato que tengas podrás utilizar todos o solamente algunas de estas operaciones, por ejemplo si tienes una variable del tipo de dato **String** no vas a poder dividirla, a menos que t煤 crees esa función. Sin embargo, s í vas a poder sumar dos variables del tipo de dato **String** para obtener el valor de dicha suma.
+Dependiendo del tipo de dato que tengas podrás utilizar todos o solamente algunas de estas operaciones, por ejemplo si tienes una variable del tipo de dato **String** no vas a poder dividirla, a menos que tú crees esa función. Sin embargo, s í vas a poder sumar dos variables del tipo de dato **String** para obtener el valor de dicha suma.
 
 Con esto espero que hayas obtenido una idea sobre cómo funcionan las operaciones, queda de parte de ti si prefieres utilizar la versión larga del **operator fun** o el operador directamente.
 
@@ -287,7 +287,7 @@ val mensaje: String = if (name.isEmpty()) {
 
 ```kotlin
 fun main(args: Array<String>) {
-    print("Ingresa un valor entre 1 y 7 seg煤n el d ía de la semana:")
+    print("Ingresa un valor entre 1 y 7 según el d ía de la semana:")
     val day = readLine()?.toInt()
 
 //Con varios valores
@@ -339,13 +339,13 @@ var contador = 10
     }
 ```
 
-Con `do while`, se garantiza la ejecución por lo menos de una vez, ya que el ciclo ejecuta el código y luego eval煤a la condición.
+Con `do while`, se garantiza la ejecución por lo menos de una vez, ya que el ciclo ejecuta el código y luego evalúa la condición.
 
 ```kotlin
 do {
         println("Generando numeroaleatorio...")
         val nAleatorio = (0..100).random()
-        println("El n煤mero generado es: $nAleatorio.")
+        println("El número generado es: $nAleatorio.")
     } while (nAleatorio > 50)
 ```
 
@@ -501,14 +501,14 @@ val listaNombres = listOf<String>("Samuel", "Eliana", "Eliana", "Hernán")
 listaNombres.also { println(it) }
 ```
 
-Existen varias funciones 煤tiles para trabajar con ellas.
+Existen varias funciones útiles para trabajar con ellas.
 
 ```kotlin
 val readOnly: List<String> = listOf("Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo")
 readOnly.size //Muestra el tama帽o de la lista
 readOnly.get(3) //Devuelve el valor de la posición 3
 readOnly.first() //Devuelve el primer valor
-readOnly.last() //Devuelve el 煤ltimo valor
+readOnly.last() //Devuelve el último valor
 println(readOnly) //[Lunes, Martes, Miércoles, Jueves, Viernes, Sábado, Domingo]
 ```
 
@@ -524,7 +524,7 @@ El `.filter` nos permite filtrar en la lista a través de una o varias condicion
 
 ### Listas mutables
 
-Ahora hablemos de las listas mutables, que poseen todo lo anterior, pero también nos da la posibilidad de ir rellenando la lista a medida que lo necesitemos, el 煤nico inconveniente es que más ineficiente con la memoria.
+Ahora hablemos de las listas mutables, que poseen todo lo anterior, pero también nos da la posibilidad de ir rellenando la lista a medida que lo necesitemos, el único inconveniente es que más ineficiente con la memoria.
 
 ```kotlin
 var mutableList: MutableList<String> = mutableListOf("Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado")
@@ -556,7 +556,7 @@ listaVacia.also { println(it) }
 
 La definición es muy similar, a través de la función mutableListOf. Ahora si nos fijamos he a帽adido de lunes a sábado que será lo que pintará, luego, usando mutableList.add he a帽adido el domingo.
 
-Por defecto los valores se irán a帽adiendo en la 煤ltima posición, pero podemos a帽adir el  índice en el que queramos escribir nuestro valor.
+Por defecto los valores se irán a帽adiendo en la última posición, pero podemos a帽adir el  índice en el que queramos escribir nuestro valor.
 
 ```kotlin
 mutableList.add(0, "Semana: ")
@@ -610,7 +610,7 @@ for (i in myArray.indices) {
 }
 ```
 
-Para el 煤ltimo ejemplo, usaremos `.forEach`, una función que hará que por cada posición haga una cosa, por ejemplo pintar el valor como el `for` anterior. A diferencia de ellos, no tenemos una variable con el contenido (véase  índice e item) sino que accedemos a él con el `iterator`, en este caso simplemente habr ía que poner `it`.
+Para el último ejemplo, usaremos `.forEach`, una función que hará que por cada posición haga una cosa, por ejemplo pintar el valor como el `for` anterior. A diferencia de ellos, no tenemos una variable con el contenido (véase  índice e item) sino que accedemos a él con el `iterator`, en este caso simplemente habr ía que poner `it`.
 
 En este ejemplo imaginemos que queremos a帽adir a los d ías de la semana dos puntos 芦:禄 as í que vamos a crear una nueva lista (mutable) e iremos rellenando la lista a través del `forEach`.
 
@@ -747,6 +747,7 @@ fun main() {
     println("valorDelSet: $valorDelSet.")
 }
 ```
+Se eliminan los elementos por su valor
 
 # **Libera el potencial de las funciones**
 
@@ -772,7 +773,7 @@ Cuando queremos devolver algo de nuestra función usamos la keyword **return**.
 
 Caso contrario cuando no queremos devolver nada de nuestra función, Kotlin regresar ía **Unit**.
 
-Ejemplo de función que no devuelve nada, no tiene ning煤n tipo de retorno.
+Ejemplo de función que no devuelve nada, no tiene ningún tipo de retorno.
 
 ![https://static.platzi.com/media/user_upload/funcion%20sin%20retorno-f8b5644b-410b-48ca-927c-43c66a1a4971.jpg](https://static.platzi.com/media/user_upload/funcion%20sin%20retorno-f8b5644b-410b-48ca-927c-43c66a1a4971.jpg)
 
@@ -969,7 +970,7 @@ fun main() {
 
 ## ****Apply****
 
-Permite convertir los tipos nullables a tipos no nullables.
+Permite realizar operaciones sobre una variable y luego devolver el valor. Permite convertir los tipos nullables a tipos no nullables.
 
 ```kotlin
 fun main() {
@@ -1006,11 +1007,11 @@ fun main() {
 
 `apply` y `also` devuelve el objeto contexto directamente.
 
-`let`, `run`, y `with` retorna el 煤ltimo valor de la lambda.
+`let`, `run`, y `with` retorna el último valor de la lambda.
 
 # **Proyecto: Bola 8 mágica**
 
-## ****Creando el men煤 de nuestra bola mágica****
+## ****Creando el menú de nuestra bola mágica****
 
 # Otra documentación
 
